@@ -1,0 +1,8 @@
+1. Faire la page d'accueil
+    1.1 Header
+        A. [logo + barre de navigation (Accueil + A propos)] => Reutilisable
+        B. Chez vous partout ailleurs => Réutilisable
+    1.2 Main
+        A. Grid avec les titres de location
+    1. Footer
+        A. Footer => Réutilisable

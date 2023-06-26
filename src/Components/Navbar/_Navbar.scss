@@ -1,0 +1,21 @@
+@import "../../Utils/Sass/Mixins";
+@import "../../Utils/Sass/Variables";
+
+.navigation {
+  @include center-element;
+  justify-content: space-between;
+}
+
+.navbar-link {
+  gap: 50px;
+  @include center-element;
+}
+
+.navbar-link a {
+  color: $primary-color;
+}
+
+.active {
+  text-decoration: underline;
+  color: aqua;
+}
