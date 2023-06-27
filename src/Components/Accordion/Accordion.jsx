@@ -1,0 +1,21 @@
+import React from 'react'
+import { useState } from 'react';
+
+
+export default function AccordionItems({item}) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
+    return (
+        <div className="items">
+          <div className="title" onClick={toggle}>
+            <h2>{item.question}</h2>
+            <i className={`fa-solid fa-chevron-${isOpen ? "down" : "up"}`}></i>
+          </div>
+          {isOpen && <div className="content">{item.answer}</div>}
+        </div>
+      );
+}
+

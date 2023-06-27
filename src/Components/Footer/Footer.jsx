@@ -1,7 +1,12 @@
 import React from 'react'
+import LogoFooter from "../../Assets/logo-footer.svg";
+import "./_Footer.scss"
 
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <div className='container-footer'>
+        <img src={LogoFooter} alt="logo-footer" className='logo' />
+        <p className='footer-p'>© 2020 Kasa. All rights reserved</p>
+    </div>
   )
 }

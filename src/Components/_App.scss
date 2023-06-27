@@ -1,4 +1,20 @@
+@import "../Utils/Sass/Variables";
+@import "../Utils/Sass/Mixins";
+
 .container-header-main {
   padding: 20px 50px;
 }
+.container-global {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+.container-footer {
+  background-color: $black;
+  @include center-element;
+  justify-content: center;
+  flex-direction: column;
+  color: $white;
+  // height: 210px;
+}
