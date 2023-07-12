@@ -1,0 +1,10 @@
+@import "../../Utils/Sass/Variables";
+
+
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    background-color: $bg-grid-card;
+}
+

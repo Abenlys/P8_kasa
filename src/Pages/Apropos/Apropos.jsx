@@ -3,11 +3,14 @@ import LacMontagne from "../../Assets/lac_montagne.svg";
 import "./_Apropos.scss";
 import { AccordionData } from "../../Components/Accordion/Accordiondata.js";
 import AccordionItems from "../../Components/Accordion/Accordion.jsx";
+import Banner from "../../Components/Banner/Banner";
 
 export default function Apropos() {
   return (
     <div>
-      <img className="LacMontagne" src={LacMontagne} alt="LacMontagne" />
+      <Banner>
+      <img className="banner-picture" src={LacMontagne} alt="LacMontagne" />
+      </Banner>
       <div className="accordion">
         {AccordionData.map((item) => (
           <AccordionItems key={item.id} item={item} />
@@ -16,3 +19,4 @@ export default function Apropos() {
     </div>
   );
 }
+
