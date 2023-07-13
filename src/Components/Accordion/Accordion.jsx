@@ -22,4 +22,3 @@ export default function AccordionItems({ item }) {
   );
 }
 
-/* <div className={`textcontent ${isOpen ? "showtext" : ""}`}>{item.answer}</div> */

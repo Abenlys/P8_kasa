@@ -1,0 +1,25 @@
+.card-organisation {
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        filter: brightness(.85);
+        
+        
+    }
+    &__title {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

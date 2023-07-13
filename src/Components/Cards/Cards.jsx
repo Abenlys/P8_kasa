@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./_Cards.scss";
-import { Url } from "../Url/Url";
+import { Url } from "../../Pages/Home/Url";
 import Card from "./Card/Card";
 
 export default function Cards() {
@@ -13,8 +13,8 @@ export default function Cards() {
     async function fetchLogements() {
       try {
         const reponse = await fetch(Url);
-        const { locationList } = await reponse.json();
-        setLocationlist(locationList);
+        const data = await reponse.json();
+        setLocationlist(data);
       } catch (err) {
         console.log("error ", err);
         setError(true);
@@ -32,7 +32,7 @@ export default function Cards() {
   return (
     <div className="container-card">
       {locationList.map((logement) => (
-        <Card key={logement.id} title={logement.title} cover={logement.cover} />
+        <Card key={logement.id} logement={logement} />
       ))}
     </div>
   );
