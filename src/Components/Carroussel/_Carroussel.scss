@@ -1,21 +1,39 @@
 .container-carroussel {
-    display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	min-height: 470px;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 470px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  &__slides-counter {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 18px;
+  }
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+	filter: brightness(.85);
+  }
 }
 
 .arrow {
-    position: absolute;
+  position: absolute;
 }
 
 .arrow_left {
-    left: 10px;
+  left: 10px;
 }
 
 .arrow_right {
-    right: 10px;
+  right: 10px;
 }
