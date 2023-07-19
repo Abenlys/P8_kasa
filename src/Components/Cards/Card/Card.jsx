@@ -9,7 +9,7 @@ export default function Card({ logement }) {
 
   // Render
   return (
-    <Link to={`/logement/id${logement.id} `} >
+    <Link to={`/logement/${logement.id} `} >
     <div className="card-organisation">
       <img
         className="card-organisation__image"

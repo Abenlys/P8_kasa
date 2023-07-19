@@ -16,9 +16,10 @@ export default function AccordionItems({ item }) {
         <i className={`fa-solid fa-chevron-up ${isOpen ? "rotate" : ""}`}></i>
       </div>
       <div className={`content ${isOpen ? "show" : ""}`}>
-      <div className={`textcontent ${isOpen ? "showtext" : ""}`}>{item.answer}</div>
+      {item.answer}
       </div>
     </div>
   );
 }
 
+/* <div className={`textcontent ${isOpen ? "showtext" : ""}`}>{item.answer}</div> */
