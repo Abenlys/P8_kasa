@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "./_Housing.scss";
 import Carroussel from "../../Components/Carroussel/Carroussel";
 import TitleLocation from "../../Components/TitleLocation/TitleLocation";
@@ -12,6 +12,8 @@ import Description from "../../Components/Description/Description";
 export default function Housing() {
   // fonction react-router-dom
   const { id } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
   // state
   const [accomodation, setAccomodation] = useState(null);
   const [error, setError] = useState(false);
@@ -21,6 +23,12 @@ export default function Housing() {
       try {
         const reponse = await fetch("../Datas/Data.json");
         const data = await reponse.json();
+        console.log(data);
+        const logementTestId = data.find((obj) => obj.id === logementId);
+        console.log(logementTestId);
+        if (!logementTestId) {
+          navigate("/*");
+        }
         const dataselected = data.filter((location) => location.id === id);
         setAccomodation(dataselected);
       } catch (err) {
@@ -30,9 +38,14 @@ export default function Housing() {
     }
     fetchAccomodation();
   }, [id]);
+
   if (error) {
     return <span>Oups il y a eu un problème</span>;
   }
+
+  const logementId = location.pathname.replace("/logement/", "");
+  console.log(logementId);
+
   //render
 
   if (accomodation !== null) {
