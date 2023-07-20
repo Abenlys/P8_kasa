@@ -1,0 +1,28 @@
+@import "../../Utils/Sass/Variables";
+
+
+.host {
+    display: flex;
+    align-items: center;
+    height: 78px;
+    gap: 15px;
+    &__name {
+        font-size: 18px;
+        color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        
+    }
+    &__picture {
+        border-radius: 50%;
+        height: 100%;
+    }
+}
+
+.second-word {
+    margin-left: 10px;
+    margin-top: 5px;
+}

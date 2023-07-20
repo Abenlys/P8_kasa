@@ -1,0 +1,54 @@
+@import "../../Utils/Sass/Mixins";
+@import "../../Utils/Sass/Variables";
+@import "../../Utils/Sass/Animations";
+
+.descrip-equip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  &__both {
+    width: 45%;
+    &__title {
+      @include center-element;
+      justify-content: space-between;
+      border-radius: 10px;
+      background-color: $primary-color;
+      color: $white;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 10px 20px 10px 20px;
+      position: relative;
+      z-index: 2;
+      .fa-chevron-up {
+        transition: transform 0.4s ease-in-out;
+        font-size: 1.5rem;
+      }
+      .rotate {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.contentaccomodation {
+  background-color: $grey;
+  color: $primary-color;
+  border-radius: 0px 0px 10px 10px;
+  font-size: 20px;
+  padding: 0 20px;
+  overflow: hidden;
+  //   transition: transform 0.4s ease-in-out;
+  //   transform: translateY(-80px) opacity(0);
+  animation: fall 400ms both;
+  position: relative;
+  z-index: -1;
+  max-height: 0;
+  
+}
+
+.showaccomodation {
+  padding: 30px 20px 20px 20px;
+  max-height: max-content;
+  //   transform: translateY(-10px) opacity(1);
+}

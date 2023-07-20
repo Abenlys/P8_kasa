@@ -1,0 +1,14 @@
+@import "../../Utils/Sass/Variables";
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+.fa-star {
+    color: $grey-star;
+    font-size: 2rem;
+}
+
+.red {
+    color: $primary-color;
+}

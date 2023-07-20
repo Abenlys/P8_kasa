@@ -3,7 +3,8 @@
 @import "../../Utils/Sass/Animations";
 
 .title {
-  @include center-element;
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
@@ -23,7 +24,7 @@
   font-size: 20px;
   padding: 0 20px;
   overflow: hidden;
-  transition: height 5s ease-in-out;
+  transition: height .4s ease-in-out;
   transform: translateY(-40px);
   width: 85%;
   margin: auto;
@@ -34,7 +35,6 @@
 
 .show {
   height: 100%;
-  
   padding: 10px 20px;
   transform: translateY(0);
 }

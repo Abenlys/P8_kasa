@@ -22,12 +22,13 @@
     object-fit: cover;
     object-position: center;
     border-radius: 25px;
-	filter: brightness(.85);
+    filter: brightness(0.85);
   }
 }
 
 .arrow {
   position: absolute;
+  cursor: pointer;
 }
 
 .arrow_left {

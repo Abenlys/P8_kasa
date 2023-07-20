@@ -1,0 +1,15 @@
+@import "../../Utils/Sass/Variables";
+
+
+.container-titlelocation {
+    color: $primary-color;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    &__title {
+        font-size: 36px;
+    &__location {
+        font-size: 18px;
+    }
+    }
+}
