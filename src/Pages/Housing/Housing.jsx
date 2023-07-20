@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import "./_Housing.scss";
 import Carroussel from "../../Components/Carroussel/Carroussel";
 import TitleLocation from "../../Components/TitleLocation/TitleLocation";
