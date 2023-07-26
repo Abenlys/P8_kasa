@@ -1,12 +1,8 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 import "./_App.scss";
-import Home from "../Pages/Home/Home";
-import Apropos from "../Pages/Apropos/Apropos";
-import Error from "../Pages/Error/Error";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
-import Housing from "../Pages/Housing/Housing";
+import Router from "../Router/Router";
 
 
 export default function App() {
@@ -16,16 +12,10 @@ export default function App() {
     <div className="container-global">
       <div className="container-header-main">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/apropos" element={<Apropos />} />
-          <Route path="/logement/:id" element={<Housing /> } />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <Router />
       </div>
       <Footer />
     </div>
   );
 }
 
-/* <Route path="/logement/:id" element={isIdValid ? <Housing /> : <Navigate to="/Error " />} /> */
