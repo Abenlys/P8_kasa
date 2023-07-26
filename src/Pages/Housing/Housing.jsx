@@ -7,16 +7,18 @@ import Host from "../../Components/Host/Host";
 import "./_Housing.scss";
 import Tags from "../../Components/Tags/Tags";
 import Rating from "../../Components/Rating/Rating";
-import Description from "../../Components/Description/Description";
+import AccordionItems from "../../Components/Accordion/Accordionitems";
 
 export default function Housing() {
   // fonction react-router-dom
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
+
   // state
   const [accomodation, setAccomodation] = useState(null);
   const [error, setError] = useState(false);
+
   // comportement
   useEffect(() => {
     async function fetchAccomodation() {
@@ -44,12 +46,10 @@ export default function Housing() {
   }
 
   const logementId = location.pathname.replace("/logement/", "");
-  console.log(logementId);
 
   //render
 
   if (accomodation !== null) {
-    console.log(accomodation);
     return (
       <div className="housing">
         <Carroussel
@@ -73,9 +73,13 @@ export default function Housing() {
           <Rating rating={accomodation[0].rating} />
         </div>
         <div className="housing__descripequip">
-          <Description
-            descrip={accomodation[0].description}
-            equip={accomodation[0].equipments}
+          <AccordionItems
+            title="Description"
+            description={accomodation[0].description}
+          />
+          <AccordionItems
+            title="Equipements"
+            description={accomodation[0].equipments}
           />
         </div>
       </div>

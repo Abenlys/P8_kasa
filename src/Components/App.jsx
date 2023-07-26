@@ -10,27 +10,7 @@ import Housing from "../Pages/Housing/Housing";
 
 
 export default function App() {
-  // // state
-  // const [availablesIds, setAvailablesIds] = useState([])
-  // const location = useLocation()
-  // // Comportement
-  // useEffect(() => {
-  //   async function fetchId() {
-  //     try {
-  //       const reponse = await fetch(Url);
-  //       const data = await reponse.json();
-  //       const ids = data.map((item) => item.id)
-  //       setAvailablesIds(ids);
-  //     } catch (err) {
-  //       console.log("error ", err);
-        
-  //     }
-  //   }
-  //   fetchId();
-  // }, []);
 
-  // // Vérifier si l'ID dans l'URL fait partie des IDs disponibles
-  // const isIdValid = availablesIds.find((id) => id === location.pathname.split("/").pop());
 
   return (
     <div className="container-global">
