@@ -16,6 +16,9 @@
     position: relative;
     width: 85%;
     margin: auto;
+    @media screen and (max-width: 767px) {
+      font-size: 13px;
+    }
   }
   .content {
     background-color: $grey;
@@ -47,8 +50,16 @@
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
+  @media screen and (max-width: 767px) {
+    display: block;
+    
+  }
   .items {
     width: 45%;
+    @media screen and (max-width: 767px) {
+      width: 95%;
+      margin-bottom: 20px;
+    }
     .title {
       @include center-element;
       justify-content: space-between;
@@ -60,6 +71,10 @@
       padding: 10px 20px 10px 20px;
       position: relative;
       z-index: 2;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+        border-radius: 5px;
+      }
     }
     .content {
       background-color: $grey;
@@ -73,6 +88,9 @@
       position: relative;
       z-index: -1;
       max-height: 0;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
     }
     .show {
       padding: 30px 20px 20px 20px;

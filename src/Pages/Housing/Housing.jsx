@@ -18,6 +18,7 @@ export default function Housing() {
   // state
   const [accomodation, setAccomodation] = useState(null);
   const [error, setError] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // comportement
   useEffect(() => {
@@ -25,9 +26,7 @@ export default function Housing() {
       try {
         const reponse = await fetch("../Datas/Data.json");
         const data = await reponse.json();
-        console.log(data);
         const logementTestId = data.find((obj) => obj.id === logementId);
-        console.log(logementTestId);
         if (!logementTestId) {
           navigate("/*");
         }
@@ -40,6 +39,16 @@ export default function Housing() {
     }
     fetchAccomodation();
   }, [id]);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   if (error) {
     return <span>Oups il y a eu un problème</span>;
@@ -58,20 +67,41 @@ export default function Housing() {
             pics: accomodation[0].pictures,
           }}
         />
-        <div className="housing__titlehost">
-          <TitleLocation
-            title={accomodation[0].title}
-            location={accomodation[0].location}
-          />
-          <Host
-            hostname={accomodation[0].host.name}
-            hostpicture={accomodation[0].host.picture}
-          />
-        </div>
-        <div className="housing__tagsrating">
-          <Tags tags={accomodation[0].tags} />
-          <Rating rating={accomodation[0].rating} />
-        </div>
+        {windowWidth >= 768 ? (
+          <>
+            <div className="housing__titlehost">
+              <TitleLocation
+                title={accomodation[0].title}
+                location={accomodation[0].location}
+              />
+              <Host
+                hostname={accomodation[0].host.name}
+                hostpicture={accomodation[0].host.picture}
+              />
+            </div>
+            <div className="housing__tagsrating">
+              <Tags tags={accomodation[0].tags} />
+              <Rating rating={accomodation[0].rating} />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="housing__titletag">
+              <TitleLocation
+                title={accomodation[0].title}
+                location={accomodation[0].location}
+              />
+              <Tags tags={accomodation[0].tags} />
+            </div>
+            <div className="housing__ratinghost">
+              <Rating rating={accomodation[0].rating} />
+              <Host
+                hostname={accomodation[0].host.name}
+                hostpicture={accomodation[0].host.picture}
+              />
+            </div>
+          </>
+        )}
         <div className="housing__descripequip">
           <AccordionItems
             title="Description"

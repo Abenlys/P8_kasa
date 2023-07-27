@@ -4,19 +4,33 @@
 .navigation {
   @include center-element;
   justify-content: space-between;
+  &__logo {
+    width: 210px;
+    height: 68px;
+    @media screen and (max-width: 767px) {
+      width: 90px;
+      height: 47px;
+    }
+  }
 }
 
 .navbar-link {
   gap: 50px;
   @include center-element;
+  @media screen and (max-width: 767px) {
+    gap: 10px;
+  }
 }
 
 .navbar-link a {
   color: $primary-color;
   font-size: 24px;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
 }
 
 .active {
   text-decoration: underline;
-  color: aqua;
+  
 }

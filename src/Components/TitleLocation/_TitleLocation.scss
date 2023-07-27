@@ -8,8 +8,15 @@
     flex-direction: column;
     &__title {
         font-size: 36px;
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 1.3rem;
+        }
     &__location {
         font-size: 18px;
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
     }
 }

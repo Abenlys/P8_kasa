@@ -7,7 +7,7 @@ import Banner from "../../Components/Banner/Banner";
 
 export default function Apropos() {
   return (
-    <div>
+    <div className="about">
       <Banner>
         <img className="banner-picture" src={LacMontagne} alt="LacMontagne" />
       </Banner>

@@ -6,10 +6,47 @@
         justify-content: space-between;
         height: 78px;
         margin-bottom: 20px;
+        
     }
     &__tagsrating {
         @include center-element;
         justify-content: space-between;
         margin-bottom: 25px;
+        
+    }
+    &__titletag {
+        .tags {
+            font-size: 14px;
+            justify-content: flex-start;
+            white-space: nowrap;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            &__items {
+                padding: 3px 15px;
+                height: 18px;
+            }
+        }
+    }
+    &__ratinghost {
+        @include center-element;
+        justify-content: space-between;
+        width: 95%;
+        .rating {
+            .fa-star {
+                font-size: 1rem;
+            }
+        }
+        .host {
+            gap: 8px;
+            height: auto;
+            &__name {
+                font-size: 12px;
+                margin-top: 18px;
+            }
+            &__picture {
+                width: 32px;
+                height: 32px;
+            }
+        }
     }
 }

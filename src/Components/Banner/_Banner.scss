@@ -1,8 +1,8 @@
 @import "../../Utils/Sass/Mixins";
 
 .kasa-banner {
-    margin: 40px 0;
-    position: relative;
+  margin: 40px 0;
+  position: relative;
 }
 
 .banner-picture {
@@ -10,16 +10,31 @@
   height: 223px;
   object-fit: cover;
   border-radius: 25px;
-  filter: brightness(.8);
+  filter: brightness(0.8);
+  @media screen and (max-width: 767px) {
+    height: 111px;
+    border-radius: 10px;
+  }
+}
 
+.about {
+  .banner-picture {
+    @media screen and (max-width: 767px) {
+      height: 223px;
+    }
+  }
 }
 
 .banner-text {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 48px;
-
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-60%, -50%);
+  color: white;
+  font-size: 48px;
+  white-space: nowrap;
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+  
 }

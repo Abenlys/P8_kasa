@@ -9,7 +9,7 @@ export default function Navbar() {
   const location = useLocation()
   return (
     <nav className="navigation">
-      <img src={Logo} alt="logo" />
+      <img src={Logo} alt="logo"  className="navigation__logo"/>
       <div className="navbar-link">
         <Link to="/" className={location.pathname === "/" ? "active" : ""}>Accueil</Link>
         <Link to="/apropos" className={location.pathname === "/apropos" ? "active" : ""}>A propos</Link>

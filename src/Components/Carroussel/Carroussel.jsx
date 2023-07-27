@@ -9,7 +9,6 @@ export default function Carroussel({ props }) {
 
   function nextSlide() {
     setCurrentSlide((currentSlide) => (currentSlide + 1) % props.pics.length);
-    console.log(props.pics.length);
   }
 
   function prevSlide() {
